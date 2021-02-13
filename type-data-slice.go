@@ -51,4 +51,29 @@ func main() {
 	slice3[1] = "Bukan Desember"
 	fmt.Println("Slice3", slice3)
 	fmt.Println("Month", months)
+
+	//Make new Slice
+	newSlice := make([]string, 2, 5)
+	fmt.Println(newSlice)
+
+	newSlice[0] = "Yana"
+	newSlice[1] = "Andika"
+
+	fmt.Println(newSlice)
+	fmt.Println("Length ", len(newSlice))
+	fmt.Println("Capacity ", cap(newSlice))
+	fmt.Println("Nilai Pertama ", newSlice[0])
+
+	//Copy Slice
+	// Pastikan Ukurannya sama
+
+	copySlice := make([]string, len(newSlice), cap(newSlice))
+	copy(copySlice, newSlice)
+	fmt.Println("Copy From New Slice ", copySlice)
+
+	iniArray := [...]int{1, 2, 3, 4, 5}
+	iniSlice := []int{1, 2, 3, 4, 5}
+	fmt.Println("Ini Array ", iniArray)
+	fmt.Println("Ini Slice ", iniSlice)
+
 }
